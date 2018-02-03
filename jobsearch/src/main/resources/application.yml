@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://jobsearcher.cxpw7yqm10wu.sa-east-1.rds.amazonaws.com/postgres
-    username: root
-    password: IvanJean
+    username: 
+    password:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
