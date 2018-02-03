@@ -1,5 +1,7 @@
 package br.com.iarts.jobsearch.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,9 +18,14 @@ public class Vacancy {
 	private Long id;
 	
 	@NonNull
-	private String empresa;
-	
-	private String descricao;
+	private String company;
+	private String role;
+	private String skills;
+	private Integer xpTime;
+	private String quality;
+	private String description;
+	private Date dtVacancy;
+	private Date dtCreation;
 	
 	
 }

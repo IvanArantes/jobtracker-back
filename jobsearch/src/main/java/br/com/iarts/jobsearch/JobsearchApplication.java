@@ -22,7 +22,7 @@ public class JobsearchApplication {
         return args -> {
             Stream.of("Desenvolvedor Java", "Desenvolvedor Big Data").forEach(descricao -> {
                 Vacancy vacancy = new Vacancy();
-                vacancy.setDescricao(descricao);
+                vacancy.setDescription(descricao);
                 repository.save(vacancy);
             });
             repository.findAll().forEach(System.out::println);

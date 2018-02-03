@@ -1,0 +1,40 @@
+<mat-card>
+  <mat-card-header>Create new vacancy</mat-card-header>
+  <mat-card-content>
+    <form class="example-container" [formGroup]="vacancyForm" (submit)="onFormSubmit()"> 
+      <mat-form-field>
+        <input matInput placeholder="Company Name" formControlName="company" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Role" formControlName="role" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Skills" formControlName="skills" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Experience Time" type="number" formControlName="xpTime"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Quality" formControlName="quality" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Publish Date" type="date" formControlName="dtVacancy" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Description" formControlName="description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+          <textarea matInput placeholder="Description" formControlName="description"></textarea>
+      </mat-form-field>
+      <button mat-button class="btn btn-accent" type="submit" [disabled]="vacancyForm.invalid">Save</button>
+    </form>
+  </mat-card-content>
+
+</mat-card>
