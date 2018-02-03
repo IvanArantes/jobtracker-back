@@ -2,67 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cec71bbd-feac-43b4-9831-1c9c5cbbab47" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/.angular-cli.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/e2e/app.e2e-spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/e2e/app.po.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/e2e/tsconfig.e2e.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/karma.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/protractor.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/app.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/app.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/app.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/app.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/app.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/app.routing.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/domain/model/vacancy.model.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/create-vacancy/create-vacancy.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/create-vacancy/create-vacancy.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/create-vacancy/create-vacancy.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/create-vacancy/create-vacancy.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/list-vacancy/list-vacancy.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/list-vacancy/list-vacancy.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/list-vacancy/list-vacancy.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/list-vacancy/list-vacancy.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/vacancy-routing.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/pages/vacancy/vacancy.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/shared/service/vacancy.service.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/shared/service/vacancy.service.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/app/shared/shared.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/assets/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/environments/environment.prod.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/environments/environment.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/main.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/polyfills.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/test.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/tsconfig.app.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/tsconfig.spec.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/src/typings.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/tsconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/jobsearcher/tslint.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jobsearch/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jobsearch/.mvn/wrapper/maven-wrapper.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jobsearch/.mvn/wrapper/maven-wrapper.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jobsearch/src/main/resources/application.properties" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/jobsearch/README.md" />
       <change beforePath="$PROJECT_DIR$/jobsearch/pom.xml" afterPath="$PROJECT_DIR$/jobsearch/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/mvnw" afterPath="$PROJECT_DIR$/jobsearch/mvnw" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" afterPath="$PROJECT_DIR$/jobsearch/mvnw.cmd" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/iarts/jobsearch/JobsearchApplication.java" afterPath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/JobsearchApplication.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/iarts/jobsearch/controller/VacancyController.java" afterPath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/controller/VacancyController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/iarts/jobsearch/entity/Vacancy.java" afterPath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/entity/Vacancy.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/iarts/jobsearch/repository/VacancyRepository.java" afterPath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/repository/VacancyRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/jobsearch/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/iarts/jobsearch/JobsearchApplicationTests.java" afterPath="$PROJECT_DIR$/jobsearch/src/test/java/br/com/iarts/jobsearch/JobsearchApplicationTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,21 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jobsearch/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -170,20 +101,7 @@
             <path>
               <item name="jobsearch" type="b2602c69:ProjectViewProjectNode" />
               <item name="jobsearcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jobsearch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jobsearcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jobsearch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jobsearcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="jobsearch" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -620,16 +538,15 @@
       <updated>1517621266648</updated>
       <workItem from="1517621270486" duration="668000" />
       <workItem from="1517622004435" duration="520000" />
-      <workItem from="1517623862340" duration="1540000" />
+      <workItem from="1517623862340" duration="1801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2728000" />
+    <option name="totallyTimeSpent" value="2989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -651,7 +568,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -819,18 +736,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/jobsearch/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobsearch/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
         </state>
       </provider>
