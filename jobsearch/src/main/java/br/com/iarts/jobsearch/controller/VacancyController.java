@@ -1,6 +1,7 @@
 package br.com.iarts.jobsearch.controller;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +23,8 @@ public class VacancyController {
     }
     
     @GetMapping
-    public Collection<Vacancy> vacancies() {
-        return repository.findAll().stream()
-                .collect(Collectors.toList());
+    public List<Vacancy> vacancies() {
+        return (List<Vacancy>) repository.findAll();
     }
     
     @PostMapping(consumes = { "application/json" })
