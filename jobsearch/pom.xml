@@ -24,6 +24,38 @@
 		<java.version>9</java.version>
 	</properties>
 
+	<profiles>
+		<profile>
+			<id>development</id>
+			<properties>
+				<db.url>jdbc:postgresql://localhost/postgres</db.url>
+				<db.username></db.username>
+				<db.password></db.password>
+			</properties>
+			<activation>
+				<property>
+					<name>environment</name>
+					<value>dev</value>
+				</property>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<db.url>jdbc:postgresql://jobsearcher.cxpw7yqm10wu.sa-east-1.rds.amazonaws.com/postgres</db.url>
+				<db.username>root</db.username>
+				<db.password>${POSTGRES_PASSWORD}</db.password>
+			</properties>
+
+			<activation>
+				<property>
+					<name>environment</name>
+					<value>prod</value>
+				</property>
+			</activation>
+		</profile>
+	</profiles>
 	<dependencies>
 
 			<dependency>
