@@ -1,6 +1,6 @@
 package br.com.iarts.jobsearch.users.service;
 
-import br.com.iarts.jobsearch.users.entity.ApplicationUser;
+import br.com.iarts.jobsearch.users.entity.User;
 import br.com.iarts.jobsearch.users.repository.ApplicationUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -21,15 +21,15 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public ApplicationUser getLoggedUserInfo() {
+    public User getLoggedUserInfo() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        ApplicationUser user =  repository.findByUsername(auth.getName());
+        User user =  repository.findByUsername(auth.getName());
         user.setPassword(null);
         return user;
     }
 
     @Override
-    public String signUpUser(ApplicationUser user) {
+    public String signUpUser(User user) {
         if(repository.findByUsername(user.getUsername())!=null){
             return "User already registered";
         }else{
@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public ApplicationUser findUserByName(String name) {
+    public User findUserByName(String name) {
         return repository.findByUsername(name);
     }
 }

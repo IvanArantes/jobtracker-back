@@ -1,10 +1,10 @@
 package br.com.iarts.jobsearch.users.service;
 
-import br.com.iarts.jobsearch.users.entity.ApplicationUser;
+import br.com.iarts.jobsearch.users.entity.User;
 
 public interface UserService {
-     ApplicationUser getLoggedUserInfo();
-     String signUpUser(ApplicationUser user);
+     User getLoggedUserInfo();
+     String signUpUser(User user);
      Boolean existsUserByName(String name);
-     ApplicationUser findUserByName(String name);
+     User findUserByName(String name);
 }
