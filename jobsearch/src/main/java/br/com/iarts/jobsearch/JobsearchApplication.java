@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 
 import br.com.iarts.jobsearch.entity.Vacancy;
 import br.com.iarts.jobsearch.repository.VacancyRepository;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class JobsearchApplication {
@@ -27,5 +28,10 @@ public class JobsearchApplication {
             });
             repository.findAll().forEach(System.out::println);
         };
+    }
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }
