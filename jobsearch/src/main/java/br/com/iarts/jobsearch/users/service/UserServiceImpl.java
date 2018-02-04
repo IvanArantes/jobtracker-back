@@ -38,4 +38,18 @@ public class UserServiceImpl implements UserService{
             return "Registered user";
         }
     }
+
+    @Override
+    public Boolean existsUserByName(String name) {
+        if(this.repository.findByUsername(name)!=null){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public ApplicationUser findUserByName(String name) {
+        return repository.findByUsername(name);
+    }
 }

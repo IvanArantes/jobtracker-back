@@ -5,4 +5,6 @@ import br.com.iarts.jobsearch.users.entity.ApplicationUser;
 public interface UserService {
      ApplicationUser getLoggedUserInfo();
      String signUpUser(ApplicationUser user);
+     Boolean existsUserByName(String name);
+     ApplicationUser findUserByName(String name);
 }
