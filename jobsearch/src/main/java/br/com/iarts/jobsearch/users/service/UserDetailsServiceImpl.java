@@ -1,8 +1,7 @@
 package br.com.iarts.jobsearch.users.service;
 
-import br.com.iarts.jobsearch.users.entity.ApplicationUser;
+import br.com.iarts.jobsearch.users.entity.User;
 import br.com.iarts.jobsearch.users.repository.ApplicationUserRepository;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -18,11 +17,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
     @Override
-    public User loadUserByUsername(String username) throws UsernameNotFoundException {
-        ApplicationUser applicationUser = applicationUserRepository.findByUsername(username);
-        if (applicationUser == null) {
+    public org.springframework.security.core.userdetails.User loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = applicationUserRepository.findByUsername(username);
+        if (user == null) {
             throw new UsernameNotFoundException(username);
         }
-        return new User(applicationUser.getUsername(), applicationUser.getPassword(), emptyList());
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), emptyList());
     }
 }

@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>9</java.version>
+		<flyway.version>5.0.2</flyway.version>
 	</properties>
 
 	<profiles>
@@ -29,8 +30,8 @@
 			<id>development</id>
 			<properties>
 				<db.url>jdbc:postgresql://localhost/postgres</db.url>
-				<db.username></db.username>
-				<db.password></db.password>
+				<db.username>root</db.username>
+				<db.password>12345</db.password>
 			</properties>
 			<activation>
 				<property>
@@ -120,6 +121,12 @@
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
 			<version>0.7.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>${flyway.version}</version>
 		</dependency>
 	</dependencies>
 

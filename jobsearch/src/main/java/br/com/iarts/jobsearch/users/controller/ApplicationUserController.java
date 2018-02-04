@@ -1,6 +1,6 @@
 package br.com.iarts.jobsearch.users.controller;
 
-import br.com.iarts.jobsearch.users.entity.ApplicationUser;
+import br.com.iarts.jobsearch.users.entity.User;
 import br.com.iarts.jobsearch.users.entity.AuthResponse;
 import br.com.iarts.jobsearch.users.exception.AuthenticationException;
 import br.com.iarts.jobsearch.users.service.UserService;
@@ -8,7 +8,6 @@ import br.com.iarts.jobsearch.users.service.UserServiceImpl;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jackson.JsonObjectSerializer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,13 +30,13 @@ public class ApplicationUserController {
     }
 
     @PostMapping("/sign-up")
-    public String signUp(@RequestBody ApplicationUser user) {
+    public String signUp(@RequestBody User user) {
        return userService.signUpUser(user);
     }
 
     @PostMapping("/login")
-    public AuthResponse logIn(@RequestBody ApplicationUser user, HttpServletResponse resp) {
-        ApplicationUser userFromDB = this.userService.findUserByName(user.getUsername());
+    public AuthResponse logIn(@RequestBody User user, HttpServletResponse resp) {
+        User userFromDB = this.userService.findUserByName(user.getUsername());
         String token = "";
         if(userFromDB!=null){
            if(passwordEncoder.matches(user.getPassword(),(userFromDB.getPassword()))) {
@@ -59,7 +58,7 @@ public class ApplicationUserController {
     }
 
     @GetMapping("/info")
-    public ApplicationUser getUserInfo(){
+    public User getUserInfo(){
         return userService.getLoggedUserInfo();
     }
 }
