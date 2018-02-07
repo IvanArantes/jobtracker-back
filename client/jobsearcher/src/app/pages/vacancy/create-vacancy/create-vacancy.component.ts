@@ -34,6 +34,10 @@ export class CreateVacancyComponent implements OnInit {
 }
   public onFormSubmit(){
     console.log(this.vacancyForm.value);
-    this.service.save(this.vacancyForm.value);
+    this.service.save(this.vacancyForm.value).subscribe(
+      resp => {
+        console.log(resp);
+      }
+    );
   }
 }
