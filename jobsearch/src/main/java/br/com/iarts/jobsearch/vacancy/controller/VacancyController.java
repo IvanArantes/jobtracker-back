@@ -1,15 +1,15 @@
-package br.com.iarts.jobsearch.controller;
+package br.com.iarts.jobsearch.vacancy.controller;
 
-import java.util.Collection;
-import java.util.stream.Collectors;
+import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.iarts.jobsearch.entity.Vacancy;
-import br.com.iarts.jobsearch.repository.VacancyRepository;
+import br.com.iarts.jobsearch.vacancy.entity.Vacancy;
+import br.com.iarts.jobsearch.vacancy.repository.VacancyRepository;
 
 @RestController
 @RequestMapping("/vacancies")
@@ -22,13 +22,12 @@ public class VacancyController {
     }
     
     @GetMapping
-    public Collection<Vacancy> vacancies() {
-        return repository.findAll().stream()
-                .collect(Collectors.toList());
+    public List<Vacancy> vacancies() {
+        return (List<Vacancy>) repository.findAll();
     }
     
     @PostMapping(consumes = { "application/json" })
-    public Vacancy save(Vacancy vacancy) {
+	public Vacancy save(@RequestBody Vacancy vacancy) {
     	return repository.save(vacancy);
     }
 }

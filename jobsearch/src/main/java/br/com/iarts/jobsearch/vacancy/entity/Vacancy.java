@@ -1,4 +1,4 @@
-package br.com.iarts.jobsearch.entity;
+package br.com.iarts.jobsearch.vacancy.entity;
 
 import java.util.Date;
 
@@ -20,12 +20,15 @@ public class Vacancy {
 	@NonNull
 	private String company;
 	private String role;
+	private String level;
 	private String skills;
 	private Integer xpTime;
 	private String quality;
+	private String url;
 	private String description;
 	private Date dtVacancy;
 	private Date dtCreation;
 	
 	
 }
+ 

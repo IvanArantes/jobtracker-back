@@ -22,9 +22,11 @@ export class CreateVacancyComponent implements OnInit {
     this.vacancyForm = this.fb.group({
         company: ['', Validators.required],
         role: ['', Validators.required],
+        level: '',
         skills: ['', Validators.required],
         xpTime: '',
         quality: '',
+        url: '',
         description: '',
         dtVacancy: ['', Validators.required]
 
@@ -32,6 +34,10 @@ export class CreateVacancyComponent implements OnInit {
 }
   public onFormSubmit(){
     console.log(this.vacancyForm.value);
-    this.service.save(this.vacancyForm.value);
+    this.service.save(this.vacancyForm.value).subscribe(
+      resp => {
+        console.log(resp);
+      }
+    );
   }
 }

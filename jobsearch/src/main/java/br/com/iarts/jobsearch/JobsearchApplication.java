@@ -7,8 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import br.com.iarts.jobsearch.entity.Vacancy;
-import br.com.iarts.jobsearch.repository.VacancyRepository;
+import br.com.iarts.jobsearch.vacancy.entity.Vacancy;
+import br.com.iarts.jobsearch.vacancy.repository.VacancyRepository;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class JobsearchApplication {
@@ -18,14 +20,7 @@ public class JobsearchApplication {
 	}
 	
     @Bean
-    ApplicationRunner init(VacancyRepository repository) {
-        return args -> {
-            Stream.of("Desenvolvedor Java", "Desenvolvedor Big Data").forEach(descricao -> {
-                Vacancy vacancy = new Vacancy();
-                vacancy.setDescription(descricao);
-                repository.save(vacancy);
-            });
-            repository.findAll().forEach(System.out::println);
-        };
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

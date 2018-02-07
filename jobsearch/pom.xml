@@ -22,8 +22,41 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>9</java.version>
+		<flyway.version>5.0.2</flyway.version>
 	</properties>
 
+	<profiles>
+		<profile>
+			<id>development</id>
+			<properties>
+				<db.url>jdbc:postgresql://localhost/postgres</db.url>
+				<db.username>root</db.username>
+				<db.password>12345</db.password>
+			</properties>
+			<activation>
+				<property>
+					<name>environment</name>
+					<value>dev</value>
+				</property>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<db.url>jdbc:postgresql://jobsearcher.cxpw7yqm10wu.sa-east-1.rds.amazonaws.com/postgres</db.url>
+				<db.username>root</db.username>
+				<db.password>${POSTGRES_PASSWORD}</db.password>
+			</properties>
+
+			<activation>
+				<property>
+					<name>environment</name>
+					<value>prod</value>
+				</property>
+			</activation>
+		</profile>
+	</profiles>
 	<dependencies>
 
 			<dependency>
@@ -77,6 +110,23 @@
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.7.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>${flyway.version}</version>
 		</dependency>
 	</dependencies>
 
