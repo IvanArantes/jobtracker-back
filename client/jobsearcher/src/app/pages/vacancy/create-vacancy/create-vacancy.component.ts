@@ -22,9 +22,11 @@ export class CreateVacancyComponent implements OnInit {
     this.vacancyForm = this.fb.group({
         company: ['', Validators.required],
         role: ['', Validators.required],
+        level: '',
         skills: ['', Validators.required],
         xpTime: '',
         quality: '',
+        url: '',
         description: '',
         dtVacancy: ['', Validators.required]
 

@@ -6,14 +6,13 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { VacancyModule } from './pages/vacancy/vacancy.module';
 import { SharedModule } from './shared/shared.module';
-import { LoginComponent } from './login/login.component';
 import {CoreModule} from './core/core.module';
+import { LoginModule } from './pages/login/login.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +21,8 @@ import {CoreModule} from './core/core.module';
     VacancyModule,
     CoreModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

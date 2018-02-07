@@ -1,5 +1,4 @@
 import * as moment from 'moment';
-import {User} from '../../user/model/user';
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {RestService} from "../rest/rest.service";
