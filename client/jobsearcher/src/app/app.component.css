@@ -3,3 +3,11 @@
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
   }
+
+mat-toolbar a:link {
+  color: white;
+}
+
+mat-toolbar a:visited {
+  color: white;
+}
