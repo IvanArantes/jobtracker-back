@@ -1,4 +1,4 @@
-package br.com.iarts.jobsearch.security;
+package br.com.iarts.jobsearch.infra.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

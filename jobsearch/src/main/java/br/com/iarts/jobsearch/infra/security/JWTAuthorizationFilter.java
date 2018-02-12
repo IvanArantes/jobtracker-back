@@ -1,19 +1,23 @@
-package br.com.iarts.jobsearch.security;
+package br.com.iarts.jobsearch.infra.security;
 
-import io.jsonwebtoken.Jwts;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import static br.com.iarts.jobsearch.infra.security.SecurityConstants.HEADER_STRING;
+import static br.com.iarts.jobsearch.infra.security.SecurityConstants.SECRET;
+import static br.com.iarts.jobsearch.infra.security.SecurityConstants.TOKEN_PREFIX;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.ArrayList;
 
-import static br.com.iarts.jobsearch.security.SecurityConstants.*;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+
+import io.jsonwebtoken.Jwts;
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     public JWTAuthorizationFilter(AuthenticationManager authenticationManager){
