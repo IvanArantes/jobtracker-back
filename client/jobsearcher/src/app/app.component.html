@@ -1,11 +1,16 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 <mat-toolbar color="primary">
-  <div>
-    <span>Welcome to JobStat </span>    
-  </div>
-  <div>
-    <a href="javascript:void(0)" [routerLink]="['']"><i class="zmdi zmdi-email"></i><span>Logout</span></a>  
-  </div>
+    <span>Welcome to JobStat </span>
+    <span class="fill-remaining-space"></span>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item><span><a href="javascript:void(0)" [routerLink]="['']"><i class="material-icons">power_settings_new</i>Logout</a></span></button>
+        <button mat-menu-item>Jean lazarento</button>
+    </mat-menu>
+
 </mat-toolbar>
-    
-      
+
+
 <router-outlet></router-outlet>

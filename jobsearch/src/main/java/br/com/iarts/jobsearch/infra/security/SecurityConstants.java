@@ -1,4 +1,4 @@
-package br.com.iarts.jobsearch.security;
+package br.com.iarts.jobsearch.infra.security;
 
 public  class SecurityConstants {
     public static final String SECRET = "SecretKeyToGenJWTs";
