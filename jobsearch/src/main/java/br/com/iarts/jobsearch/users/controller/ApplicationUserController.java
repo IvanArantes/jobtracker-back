@@ -23,11 +23,6 @@ import br.com.iarts.jobsearch.users.service.UserServiceImpl;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
-
-import static br.com.iarts.jobsearch.security.SecurityConstants.*;
-
 @RestController
 @RequestMapping("/auth")
 public class ApplicationUserController {
