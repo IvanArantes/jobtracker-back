@@ -14,7 +14,7 @@ export class AuthService {
   }
 
   login(username: string, password: string ) : Observable<Auth> {
-    const url = `${this.restService.getUrl()}/auth/login`;
+    const url = `${this.restService.getUrl()}auth/login`;
     return this.http.post<Auth>(url, {username, password})
       .do(res => this.setSession(res))
       .shareReplay();
@@ -49,5 +49,4 @@ export class AuthService {
   getToken() {
     return localStorage.getItem('id_token');
   }
-
 }
