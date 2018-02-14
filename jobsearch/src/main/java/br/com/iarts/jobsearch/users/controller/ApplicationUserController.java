@@ -1,20 +1,32 @@
 package br.com.iarts.jobsearch.users.controller;
 
-import br.com.iarts.jobsearch.users.entity.User;
+import static br.com.iarts.jobsearch.infra.security.SecurityConstants.EXPIRATION_TIME;
+import static br.com.iarts.jobsearch.infra.security.SecurityConstants.SECRET;
+
+import java.util.Date;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import br.com.iarts.jobsearch.users.entity.AuthResponse;
+import br.com.iarts.jobsearch.users.entity.User;
 import br.com.iarts.jobsearch.users.exception.AuthenticationException;
 import br.com.iarts.jobsearch.users.service.UserService;
 import br.com.iarts.jobsearch.users.service.UserServiceImpl;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
-import static br.com.iarts.jobsearch.infra.security.SecurityConstants.*;
+import static br.com.iarts.jobsearch.security.SecurityConstants.*;
 
 @RestController
 @RequestMapping("/auth")
