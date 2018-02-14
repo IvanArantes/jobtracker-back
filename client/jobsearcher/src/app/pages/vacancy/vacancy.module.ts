@@ -5,6 +5,7 @@ import { VacancyRoutingModule } from './vacancy-routing.module';
 import { CreateVacancyComponent } from './create-vacancy/create-vacancy.component';
 import { ListVacancyComponent } from './list-vacancy/list-vacancy.component';
 import { SharedModule } from '../../shared/shared.module';
+import { SkillService } from '../../shared/service/skill.service';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { SharedModule } from '../../shared/shared.module';
   declarations: [
   CreateVacancyComponent,
   ListVacancyComponent],
-  providers: [VacancyService]
+  providers: [VacancyService, SkillService]
 })
 export class VacancyModule { }

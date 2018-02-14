@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { VacancyService } from '../../../shared/service/vacancy.service';
+import { Skill } from '../../../domain/model/skill.model';
+import { SkillService } from '../../../shared/service/skill.service';
 
 
 @Component({
@@ -10,12 +12,15 @@ import { VacancyService } from '../../../shared/service/vacancy.service';
 })
 export class CreateVacancyComponent implements OnInit {
   vacancyForm: FormGroup;
+  skillList: Skill[];
 
-  constructor(private fb: FormBuilder, private service: VacancyService) { 
+  constructor(private fb: FormBuilder, private service: VacancyService, 
+  private skillService: SkillService) { 
     this.createForm();
   }
 
   ngOnInit() {
+    this.LoadSkills();
   }
 
   private createForm() {
@@ -23,7 +28,7 @@ export class CreateVacancyComponent implements OnInit {
         company: ['', Validators.required],
         role: ['', Validators.required],
         level: '',
-        skills: ['', Validators.required],
+        skills: [this.skillList, Validators.required],
         xpTime: '',
         quality: '',
         url: '',
@@ -39,5 +44,12 @@ export class CreateVacancyComponent implements OnInit {
         console.log(resp);
       }
     );
+  }
+
+  private LoadSkills(){
+    this.skillService.getAll()
+    .subscribe((resp: Skill[]) => {
+      this.skillList = resp;
+    })
   }
 }

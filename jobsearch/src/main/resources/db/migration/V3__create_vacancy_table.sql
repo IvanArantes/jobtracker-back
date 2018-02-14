@@ -1,5 +1,5 @@
 create table vacancy (
-	id int8 not null, 
+	id bigserial not null, 
 	company varchar(255),
 	description varchar(255),
 	dt_creation timestamp,

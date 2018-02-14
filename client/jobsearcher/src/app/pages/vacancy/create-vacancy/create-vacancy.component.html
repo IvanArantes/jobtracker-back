@@ -15,9 +15,11 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Skills" formControlName="skills" />
+        <mat-select placeholder="Skills" formControlName="skills" multiple>
+          <mat-option *ngFor="let skill of skillList" [value]="skill">{{skill.skillName}}</mat-option>
+        </mat-select>
       </mat-form-field>
-
+      
       <mat-form-field>
         <input matInput placeholder="Experience Time" type="number" formControlName="xpTime"/>
       </mat-form-field>

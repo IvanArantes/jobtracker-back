@@ -17,9 +17,8 @@ export class VacancyService {
   }
 
   public save(vacancy: Vacancy): Observable<any> {
-    //let headers = new HttpHeaders({ 'Authorization': 'Bearer ' + this.auth.getToken() });
     return this.http.post('//localhost:8080/vacancies', vacancy)
-    .map(resp => resp as any)
+    .map(resp => resp as Vacancy)
     .catch(err => {throw err})
   }
 }
