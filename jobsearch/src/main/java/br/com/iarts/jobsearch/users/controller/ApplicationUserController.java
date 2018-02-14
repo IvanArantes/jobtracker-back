@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
-import static br.com.iarts.jobsearch.security.SecurityConstants.*;
+import static br.com.iarts.jobsearch.infra.security.SecurityConstants.*;
 
 @RestController
 @RequestMapping("/auth")
