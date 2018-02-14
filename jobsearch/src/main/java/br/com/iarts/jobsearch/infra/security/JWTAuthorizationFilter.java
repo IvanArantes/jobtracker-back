@@ -1,4 +1,4 @@
-package br.com.iarts.jobsearch.security;
+package br.com.iarts.jobsearch.infra.security;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -10,10 +10,11 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import static br.com.iarts.jobsearch.infra.security.SecurityConstants.*;
+
 import java.io.IOException;
 import java.util.ArrayList;
-
-import static br.com.iarts.jobsearch.security.SecurityConstants.*;
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     public JWTAuthorizationFilter(AuthenticationManager authenticationManager){
