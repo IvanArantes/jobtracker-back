@@ -23,8 +23,10 @@ import lombok.ToString;
 public class Skill {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	@Column(name = "id_skill")
+	private long idSkill;
 
 	@Column(name = "skillname")
 	private String skillName;
+
 }
