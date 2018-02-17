@@ -198,7 +198,7 @@
 				</executions>
 				<configuration>
 					<scripts>
-						<script>file:/src/main/scripts/BuildDockerfile.groovy</script>
+						<script>file:BuildDockerfile.groovy</script>
 					</scripts>
 				</configuration>
 				<dependencies>
