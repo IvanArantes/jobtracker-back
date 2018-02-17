@@ -45,7 +45,7 @@ jobs:
       # run tests!
       - run: mvn clean package
 
-      
+
 machine:
   services:
     - docker
