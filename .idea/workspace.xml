@@ -2,53 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="653fcfdf-edcc-40a3-b311-e52231cde723" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/jobsearch.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/.circleci/config.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/.mvn/wrapper/maven-wrapper.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/.mvn/wrapper/maven-wrapper.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/mvnw" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/mvnw.cmd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/docker/DockerFileTemplate" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/docker/Dockerrun.aws.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/docker/deploy.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/JobsearchApplication.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/infra/security/JWTAuthorizationFilter.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/infra/security/JwtAuthenticationEntryPoint.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/infra/security/SecurityConstants.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/infra/security/WebSecurity.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/skills/controller/SkillController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/skills/entity/Skill.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/skills/repository/SkillRepository.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/skills/service/SkillService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/controller/ApplicationUserController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/entity/AuthResponse.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/entity/User.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/exception/AuthenticationException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/exception/AuthorizationException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/repository/ApplicationUserRepository.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/service/UserDetailsServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/service/UserService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/users/service/UserServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/vacancy/controller/VacancyController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/vacancy/entity/Vacancy.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/vacancy/repository/VacancyRepository.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/java/br/com/iarts/jobsearch/vacancy/service/VacancyService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/application.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/db/migration/V1__migration_baseline.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/db/migration/V2__create_table_user.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/db/migration/V3__create_vacancy_table.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/db/migration/V4__create_skill_table.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/db/migration/V5__fk_vacancy_skill.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/resources/db/migration/V6__changed_column_name.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jobsearch/src/main/scripts/BuildDockerfile.groovy" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" afterPath="$PROJECT_DIR$/.circleci/config.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,12 +12,33 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="642">
+              <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.circleci/config.yml" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -100,6 +75,11 @@
             <path>
               <item name="jobsearch" type="b2602c69:ProjectViewProjectNode" />
               <item name="jobtracker-back" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jobsearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobtracker-back" type="462c0819:PsiDirectoryNode" />
+              <item name=".circleci" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -239,12 +219,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518832503837</updated>
-      <workItem from="1518832510015" duration="369000" />
+      <workItem from="1518832510015" duration="952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369000" />
+    <option name="totallyTimeSpent" value="952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
@@ -270,12 +250,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -297,6 +277,16 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
