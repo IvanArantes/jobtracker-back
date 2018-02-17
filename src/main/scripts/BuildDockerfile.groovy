@@ -1,3 +1,4 @@
+println "started groovy docker script"
 String template = new File("${project.basedir}/src/main/docker/DockerfileTemplate".toString()).getText()
 
 def dockerFileText = new groovy.text.SimpleTemplateEngine().createTemplate(template)
