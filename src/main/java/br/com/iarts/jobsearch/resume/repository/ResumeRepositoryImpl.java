@@ -8,16 +8,17 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.util.IOUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItem;
+import org.h2.store.fs.FileChannelOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
 import java.util.UUID;
 
 @Slf4j
@@ -45,15 +46,15 @@ public class ResumeRepositoryImpl implements ResumeRepository{
     }
 
     @Override
-    public File getFile(String keyName) {
+    public byte[] getFile(String keyName) {
+        byte[] fileBytes = null;
         S3Object s3Object = s3Client.getObject(new GetObjectRequest(resumeBucketName, keyName));
         try {
-            byte[] fileBytes = IOUtils.toByteArray(s3Object.getObjectContent());
-           // File file = new DiskFileItem();
+             fileBytes = IOUtils.toByteArray(s3Object.getObjectContent());
         } catch (IOException e) {
             log.error("Erro ao converter arquivo: "+e);
         }
-        return null;
+        return fileBytes;
     }
 
 }

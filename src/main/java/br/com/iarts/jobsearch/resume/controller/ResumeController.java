@@ -2,11 +2,11 @@ package br.com.iarts.jobsearch.resume.controller;
 
 import br.com.iarts.jobsearch.resume.service.ResumeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/resume")
@@ -20,7 +20,12 @@ public class ResumeController {
     }
 
     @PostMapping("/upload")
-    public String uploadResume(@RequestPart(value = "file")MultipartFile file){
+    public String uploadResume(@RequestPart(value = "file")MultipartFile file) throws Exception {
         return "Arquivo salvo com sucesso: "+ resumeService.uploadFile(file);
+    }
+
+    @GetMapping("/{name}")
+    public byte[] getResume(@PathVariable String name) throws IOException {
+        return resumeService.getFile(name);
     }
 }
