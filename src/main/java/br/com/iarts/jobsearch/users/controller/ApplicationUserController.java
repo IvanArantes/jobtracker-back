@@ -43,12 +43,12 @@ public class ApplicationUserController {
 
     @PostMapping("/login")
     public AuthResponse logIn(@RequestBody User user, HttpServletResponse resp) {
-        User userFromDB = this.userService.findUserByName(user.getUsername());
+        User userFromDB = this.userService.findUserByEmail(user.getEmail());
         String token = "";
         if(userFromDB!=null){
            if(passwordEncoder.matches(user.getPassword(),(userFromDB.getPassword()))) {
                 token = Jwts.builder()
-                       .setSubject((user.getUsername()))
+                       .setSubject((user.getEmail()))
                        .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
                        .signWith(SignatureAlgorithm.HS512, SECRET.getBytes())
                        .compact();
