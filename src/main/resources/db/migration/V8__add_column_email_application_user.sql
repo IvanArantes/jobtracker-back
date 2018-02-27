@@ -1,0 +1,1 @@
+ALTER TABLE auth.application_user ADD COLUMN email varchar(50);
