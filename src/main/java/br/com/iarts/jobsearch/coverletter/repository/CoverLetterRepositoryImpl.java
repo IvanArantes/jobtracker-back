@@ -2,10 +2,12 @@ package br.com.iarts.jobsearch.coverletter.repository;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.util.IOUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
@@ -34,6 +36,7 @@ public class CoverLetterRepositoryImpl implements CoverLetterRepository{
             log.debug("Salvando arquivo cover letter no S3: "+fileName);
         } catch (AmazonServiceException e) {
             log.error("Erro ao salvar cover letter no S3: "+ e);
+            throw new ServiceException("Erro ao salvar cover letter no S3: "+ e);
         }
     }
 
@@ -45,7 +48,18 @@ public class CoverLetterRepositoryImpl implements CoverLetterRepository{
             fileBytes = IOUtils.toByteArray(s3Object.getObjectContent());
         } catch (IOException e) {
             log.error("Erro ao converter arquivo: "+e);
+            throw  new ServiceException("Erro ao converter arquivo: " +e);
         }
         return fileBytes;
+    }
+
+    @Override
+    public void deleteFile(String keyName) {
+        try {
+            s3Client.deleteObject(new DeleteObjectRequest(coverLetterBucketName, keyName));
+        } catch (AmazonServiceException ase) {
+            log.error("Erro ao deleter arquivo: "+ase);
+            throw  new ServiceException("Erro ao deleter arquivo: " +ase);
+        }
     }
 }

@@ -28,4 +28,9 @@ public class ResumeController {
     public byte[] getResume(@PathVariable String name) throws IOException {
         return resumeService.getFile(name);
     }
+
+    @DeleteMapping("/{name}")
+    public void deleteResume(@PathVariable String name) {
+         resumeService.deleteFile(name);
+    }
 }

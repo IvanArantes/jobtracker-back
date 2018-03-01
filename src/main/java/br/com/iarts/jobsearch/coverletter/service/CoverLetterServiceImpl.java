@@ -64,6 +64,10 @@ public class CoverLetterServiceImpl implements CoverLetterService {
         return convFile;
     }
 
+    @Override
+    public void deleteFile(String keyName) {
+        coverLetterRepository.deleteFile(keyName);
+    }
 
     private String generateFileName(MultipartFile multiPart) {
         return new Date().getTime() + "-" + multiPart.getOriginalFilename().replace(" ", "_")

@@ -25,4 +25,9 @@ public class CoverLetterController {
     public byte[] getCoverLetter(@PathVariable String name) {
         return coverLetterService.getFile(name);
     }
+
+    @DeleteMapping("/{name}")
+    public void deleteResume(@PathVariable String name) {
+        coverLetterService.deleteFile(name);
+    }
 }

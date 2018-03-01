@@ -66,6 +66,10 @@ public class ResumeServiceImpl implements ResumeService{
         return convFile;
     }
 
+    @Override
+    public void deleteFile(String keyName) {
+        resumeRepository.deleteFile(keyName);
+    }
 
     private String generateFileName(MultipartFile multiPart) {
         return new Date().getTime() + "-" + multiPart.getOriginalFilename().replace(" ", "_")

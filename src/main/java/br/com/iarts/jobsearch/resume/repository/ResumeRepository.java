@@ -20,4 +20,7 @@ public interface ResumeRepository {
      * @return byte with file.
      */
     byte[] getFile(String keyName);
+
+
+    void deleteFile(String keyName);
 }

@@ -24,4 +24,10 @@ public interface ResumeService {
      * @return byte with file.
      */
     byte[] getFile(String keyName);
+
+    /**
+     * Delete file
+     * @param keyName name of the file.
+     */
+    void deleteFile(String keyName);
 }

@@ -2,15 +2,13 @@ package br.com.iarts.jobsearch.resume.repository;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.amazonaws.services.s3.model.S3Object;
+import com.amazonaws.services.s3.model.*;
 import com.amazonaws.util.IOUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItem;
 import org.h2.store.fs.FileChannelOutputStream;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
@@ -42,6 +40,7 @@ public class ResumeRepositoryImpl implements ResumeRepository{
             log.debug("Salvando arquivo resume no S3: "+fileName);
         } catch (AmazonServiceException  e) {
             log.error("Erro ao salvar resume no S3: "+ e);
+            throw  new ServiceException("Erro ao salvar resume no S3: " +e);
         }
     }
 
@@ -53,8 +52,18 @@ public class ResumeRepositoryImpl implements ResumeRepository{
              fileBytes = IOUtils.toByteArray(s3Object.getObjectContent());
         } catch (IOException e) {
             log.error("Erro ao converter arquivo: "+e);
+            throw  new ServiceException("Erro ao converter arquivo: " +e);
         }
         return fileBytes;
     }
 
+    @Override
+    public void deleteFile(String keyName) {
+        try {
+            s3Client.deleteObject(new DeleteObjectRequest(resumeBucketName, keyName));
+        } catch (AmazonServiceException ase) {
+            log.error("Erro ao deleter arquivo: "+ase);
+            throw  new ServiceException("Erro ao deleter arquivo: " +ase);
+        }
+    }
 }
