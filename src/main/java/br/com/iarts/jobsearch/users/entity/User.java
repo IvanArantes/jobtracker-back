@@ -15,6 +15,17 @@ public class User{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String username;
+    @NonNull
+    private String name;
+    @NonNull
     private String password;
+    @NonNull
+    private String email;
+
+    @Enumerated(EnumType.ORDINAL)
+    private Sex sex;
+    private String country;
+    private String state;
+    private String city;
+
 }

@@ -1,0 +1,1 @@
+ALTER TABLE auth.application_user RENAME COLUMN username TO name;
