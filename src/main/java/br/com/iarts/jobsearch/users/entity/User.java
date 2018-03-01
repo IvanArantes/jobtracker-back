@@ -19,4 +19,10 @@ public class User{
     private String password;
     private String email;
 
+    @Enumerated(EnumType.ORDINAL)
+    private Sex sex;
+    private String country;
+    private String state;
+    private String city;
+
 }

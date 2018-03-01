@@ -38,7 +38,7 @@ public class ApplicationUserController {
 
     @PostMapping("/sign-up")
     public String signUp(@RequestBody User user) {
-       return userService.signUpUser(user);
+        return userService.signUpUser(user);
     }
 
     @PostMapping("/login")
