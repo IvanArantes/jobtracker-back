@@ -6,7 +6,9 @@ import static br.com.iarts.jobsearch.infra.security.SecurityConstants.SECRET;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
+import br.com.iarts.jobsearch.exceptions.InvalidParamsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,9 +39,11 @@ public class ApplicationUserController {
     }
 
     @PostMapping("/sign-up")
-    public String signUp(@RequestBody User user) {
+    public String signUp(@RequestBody @Valid User user) throws InvalidParamsException{
+        checkValidUser(user);
         return userService.signUpUser(user);
     }
+
 
     @PostMapping("/login")
     public AuthResponse logIn(@RequestBody User user, HttpServletResponse resp) {
@@ -67,5 +71,15 @@ public class ApplicationUserController {
     @GetMapping("/info")
     public User getUserInfo(){
         return userService.getLoggedUserInfo();
+    }
+
+
+
+    private void checkValidUser(@Valid User user) throws InvalidParamsException {
+        if(user.getEmail() == null ||
+                user.getPassword() == null ||
+                user.getName() == null) {
+            throw new InvalidParamsException("Name, email and password must be filled.");
+        }
     }
 }
