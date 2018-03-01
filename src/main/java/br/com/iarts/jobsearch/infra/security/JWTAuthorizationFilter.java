@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.iarts.jobsearch.users.exception.AuthorizationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -49,7 +50,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
             if(user!= null){
                 return new UsernamePasswordAuthenticationToken(user, null, new ArrayList<>());
             }
-            return null;
+            throw new AuthorizationException("Invalid Authentication");
         }
         return null;
     }
