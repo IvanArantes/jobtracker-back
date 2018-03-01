@@ -1,18 +1,20 @@
-package br.com.iarts.jobsearch.resume.repository;
+package br.com.iarts.jobsearch.coverletter.repository;
 
 import java.io.File;
 
 /**
- * Resume Repository
+ * Cover Letter Repository.
  * @author Jean
  */
-public interface ResumeRepository {
+public interface CoverLetterRepository {
+
     /**
      * Upload file on S3.
      * @param file file.
      * @param fileName name of the file.
      */
     void uploadFile(File file, String fileName);
+
 
     /**
      * Download file.

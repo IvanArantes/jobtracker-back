@@ -1,17 +1,15 @@
-package br.com.iarts.jobsearch.resume.service;
+package br.com.iarts.jobsearch.coverletter.service;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
-
 /**
- * Resume Service for uploading and download of the file.
+ * Cover Letter Service for uploading and download of the file.
  * @author Jean
  */
-public interface ResumeService {
+public interface CoverLetterService {
+
     /**
-     * It uploads a resume file.
+     * It uploads a coverLetter file.
      * @param file multipartFile
      * @return name of file saved on S3.
      * @throws Exception possible exception
@@ -19,7 +17,7 @@ public interface ResumeService {
     String uploadFile(MultipartFile file) throws Exception;
 
     /**
-     * Retrieves the resume saved on S3.
+     * Retrieves the coverLetter saved on S3.
      * @param keyName name of the file saved on s3
      * @return byte with file.
      */

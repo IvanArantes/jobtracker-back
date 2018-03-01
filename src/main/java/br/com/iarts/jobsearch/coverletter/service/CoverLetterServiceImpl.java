@@ -1,31 +1,29 @@
-package br.com.iarts.jobsearch.resume.service;
+package br.com.iarts.jobsearch.coverletter.service;
 
-import br.com.iarts.jobsearch.resume.repository.ResumeRepository;
-import br.com.iarts.jobsearch.resume.repository.ResumeRepositoryImpl;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItem;
+import br.com.iarts.jobsearch.coverletter.repository.CoverLetterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Date;
 import java.util.UUID;
 
-
 /**
- *  Implementation of Resume Service.
- *  @author Jean
+ * Implementation of Cover Letter Service.
+ * @author Jean
  */
 @Service
-public class ResumeServiceImpl implements ResumeService{
+public class CoverLetterServiceImpl implements CoverLetterService {
 
-    private ResumeRepository resumeRepository;
+    private CoverLetterRepository coverLetterRepository;
+
 
     @Autowired
-    public ResumeServiceImpl(ResumeRepositoryImpl resumeRepository) {
-        this.resumeRepository = resumeRepository;
+    public CoverLetterServiceImpl(CoverLetterRepository coverLetterRepository) {
+        this.coverLetterRepository = coverLetterRepository;
     }
 
     @Override
@@ -35,7 +33,7 @@ public class ResumeServiceImpl implements ResumeService{
         try {
             File file = convertMultiPartToFile(multipartFile);
             fileName = generateFileName(multipartFile);
-            resumeRepository.uploadFile(file,fileName);
+            coverLetterRepository.uploadFile(file,fileName);
             file.delete();
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,7 +53,7 @@ public class ResumeServiceImpl implements ResumeService{
 
     @Override
     public byte[] getFile(String keyName) {
-        return resumeRepository.getFile(keyName);
+        return coverLetterRepository.getFile(keyName);
     }
 
     private File convertMultiPartToFile(MultipartFile file) throws IOException {
